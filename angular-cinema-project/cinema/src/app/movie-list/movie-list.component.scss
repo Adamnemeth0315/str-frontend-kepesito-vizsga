@@ -1,1 +1,11 @@
-.table-section {}
+@use 'mixin';
+
+/* th {
+   @include cinema-background-style;
+}
+
+#get-button {
+    @include cinema-background-style
+} */
+tr:nth-child(even) {background:rgb(170, 170, 170)}
+
