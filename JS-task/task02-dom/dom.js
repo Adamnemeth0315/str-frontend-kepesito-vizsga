@@ -1,6 +1,10 @@
 function changeOuterLinks() {
     const links = Array.from(document.getElementsByTagName('a')).filter(link => link.innerHTML.includes('outer-link'));
-    links.forEach(item => item.setAttribute('target', '_blank'));
+    links.forEach(item => { 
+        item.setAttribute('target', '_blank')
+        item.innerHTML = `<strong>${item.innerHTML}</strong>`;
+    });
+    
     
     const nav = document.querySelector('#link-list');
     nav.style.display = "flex";
