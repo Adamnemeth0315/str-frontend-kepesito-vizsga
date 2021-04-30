@@ -7,7 +7,7 @@
       <label class="text-warning" for="title">Movie Title:</label>
       <input id="title" type="text" class="form-control"
        required
-       pattern="[A-Ű][a-ű]{5,25}"
+       pattern="[A-Ű a-ű_]{5,25}"
        name="title"
        [(ngModel)]="movie.title">
     </div>
@@ -15,7 +15,7 @@
 
     <div class="row">
       <div class="form-group col-6">
-        <label class="text-warning" for="id">Release year:</label>
+        <label class="text-warning" for="year">Release year:</label>
         <input id="year" type="text" class="form-control"
            required
            pattern="^[1,2][9,0][1-9][1-9]{4}"
@@ -24,9 +24,9 @@
       </div>
 
       <div class="form-group col-6">
-        <label class="text-warning" for="id">Category:</label>
+        <label class="text-warning" for="category">Category:</label>
         <select class="form-control" id="category">
-          <option>Choose Category</option>
+          <option selected="selected">Choose Category</option>
           <option>Drama</option>
           <option>Action</option>
           <option>Fantasy</option>
